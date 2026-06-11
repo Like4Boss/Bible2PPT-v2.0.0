@@ -1,4 +1,4 @@
-#!C:\Users\joons\Projects\Personal\bible_db_merger\.venv\Scripts\python.exe
+#!C:\Users\joons\Projects\Personal\bible2ppt\.venv\Scripts\python.exe
 
 ##############################################################################
 #

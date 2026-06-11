@@ -10,8 +10,14 @@ from core.repository import Repository
 from gui.interface import Interface
 
 def main():
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    db_path = os.path.abspath(os.path.join(script_dir, "..", "bible_combiner", "unified_bible.db"))
+    if getattr(sys, 'frozen', False):
+        # Running as a bundled PyInstaller executable
+        base_dir = sys._MEIPASS
+        db_path = os.path.join(base_dir, "unified_bible.db")
+    else:
+        # Running in development mode
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        db_path = os.path.abspath(os.path.join(script_dir, "..", "bible_combiner", "unified_bible.db"))
             
     # Initialize layers
     try:

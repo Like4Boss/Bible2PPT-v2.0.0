@@ -1,0 +1,21 @@
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Databases (Protects copyrighted translations like NIV)
+bible_data/
+bible_combiner/unified_bible.db
+app/unified_bible.db
+
+# PyInstaller build directories and configs
+build/
+dist/
+*.spec
+
+# Python bytecode and cash files
+**/__pycache__/
+*.pyc
+
+# Local PowerPoint test decks
+app/test_deck.pptx
